@@ -1,0 +1,17 @@
+Aplikasi Administrasi (FO) Yayasan STIKOM Dinamika Bangsa Jambi
+
+Administrasi :
+1. Registrasi Mahasiswa Baru
+2. DU Semester
+3. Angsuran Sumbangan Pembangunan
+
+Laporan :
+1. Laporan Keseluruhan Registrasi
+2. Laporan Keseluruhan DU Semester
+3. Laporan Per-Hari Petugas FO
+4. Laporan Angsuran :
+	a. Per Bulan
+	b.
+
+
+* Laporan masih belum lengkap dan belum sesuai dengan keinginan yayasan
