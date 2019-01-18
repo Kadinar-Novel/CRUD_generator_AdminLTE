@@ -7,7 +7,8 @@ Setup:
 3. Pilih menu CRUD Generator, pilih table yang akan dibuat CRUD isi title dan deskripsi.<br/>
 4. Kemudian atur pada Pengaturan Modul agar CRUD yang dibuat sesuai dengan linknya.<br/>
 5. Semua aplikasi yang sudah digenerate ada difolder apps/pages.<br/>
-6. Untuk ubah database ada didalam folder apps/lib nama file conn.php
+6. Untuk ubah database ada didalam folder apps/lib nama file conn.php <br/>
+7. Jalakan apps yang sudah dibuat dengan login menggunakan username: admin password: admin
 
 Thanks to: <br/>
 https://adminlte.io/ <br/>
