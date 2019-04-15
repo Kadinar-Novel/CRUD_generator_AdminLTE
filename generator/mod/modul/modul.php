@@ -19,11 +19,11 @@
 			if(!empty($_GET['id']))
 			{
 				$act = "$aksi?mod=modul&act=edit";
-				$query = mysql_query("SELECT * FROM modul WHERE id_modul = '$_GET[id]'");
-				$temukan = mysql_num_rows($query);
+				$query = mysqli_query($conn, "SELECT * FROM modul WHERE id_modul = '$_GET[id]'");
+				$temukan = mysqli_num_rows($query);
 				if($temukan > 0)
 				{
-					$c = mysql_fetch_assoc($query);
+					$c = mysqli_fetch_assoc($query);
 				}
 				else
 				{
@@ -51,8 +51,8 @@
 							<div class='w3-col s4'>
 								<select name='id_menu' class='w3-select' required>
 									<option value=''>- Pilih Menu -</option>";
-								$sql_m = mysql_query("SELECT * FROM menu ORDER BY id_menu ASC");
-								while($men = mysql_fetch_assoc($sql_m))
+								$sql_m = mysqli_query($conn,"SELECT * FROM menu ORDER BY id_menu ASC");
+								while($men = mysqli_fetch_assoc($sql_m))
 								{
 									if(isset($c['id_menu']) && $c['id_menu'] == $men['id_menu'])
 									{
@@ -1730,13 +1730,13 @@
 				$q 	.= " ";
 				
 
-				$sql_kul = mysql_query($query);
-				$fd_kul = mysql_num_rows($sql_kul);
+				$sql_kul = mysqli_query($conn, $query);
+				$fd_kul = mysqli_num_rows($sql_kul);
 
 				if($fd_kul > 0)
 				{
 					$no = $posisi + 1;
-					while ($m = mysql_fetch_assoc($sql_kul)) {
+					while ($m = mysqli_fetch_assoc($sql_kul)) {
 						echo"<tr>
 						
 							<td>$no</td>
@@ -1753,7 +1753,7 @@
 					}
 	
 
-					$jmldata = mysql_num_rows(mysql_query($q));
+					$jmldata = mysqli_num_rows(mysqli_query($conn,$q));
 
 					$jmlhalaman  = $p->jumlahHalaman($jmldata, $batas);
 		    		$linkHalaman = $p->navHalaman($_GET['halaman'], $jmlhalaman, $linkaksi);

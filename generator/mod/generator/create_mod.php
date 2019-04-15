@@ -48,7 +48,7 @@ $string = "<?php
               <h3 class='box-title'> ".$nama_header."</h3>
 			</div>\";
 			
-            echo\"<form role='form'  method='POST' action='\$act'>
+            echo\"<form role='form'  method='POST' action='\$act' enctype='multipart/form-data' >
               <div class='box-body'>
                 <div class='form-group'>
                   

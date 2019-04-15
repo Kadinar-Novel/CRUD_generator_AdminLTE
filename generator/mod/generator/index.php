@@ -47,13 +47,13 @@ echo implode(", ", $arr2);
 		<tr>
 			<td>Nama Title</td>
 			<td>:</td>
-			<td><input type="text" name="nmtitle"></td>
+			<td><input type="text" name="nmtitle" placeholder="Title untuk judul menu"></td>
 		</tr>
 
 		<tr>
 			<td>Desc</td>
 			<td>:</td>
-			<td><input type="text" name="desc"></td>
+			<td><input type="text" name="desc" placeholder="Untuk penjelasan menu"></td>
 		</tr>
 
 		<tr>

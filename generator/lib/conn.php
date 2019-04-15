@@ -6,10 +6,7 @@
 
 	$base_url = "";
 
-	$conn = mysql_connect($host, $user, $pass) or die("Tidak terkoneksi ke server!");
-	if ($conn) {
-		$dbselect = mysql_select_db($db, $conn) or die("Tidak terhubung ke Database.");
-	}
+	$conn = mysqli_connect($host, $user, $pass, $db) or die("Can not connect to database");
 
-	include"fungsi_flash.php";
+	include "fungsi_flash.php";
 ?>

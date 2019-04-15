@@ -29,11 +29,11 @@
 			if(!empty($_GET['id']))
 			{
 				$act = "$aksi?mod=user&act=edit";
-				$query = mysql_query("SELECT * FROM user WHERE id_user = '$_GET[id]'");
-				$temukan = mysql_num_rows($query);
+				$query = mysqli_query($conn,"SELECT * FROM user WHERE id_user = '$_GET[id]'");
+				$temukan = mysqli_num_rows($query);
 				if($temukan > 0)
 				{
-					$c = mysql_fetch_assoc($query);
+					$c = mysqli_fetch_assoc($query);
 				}
 				else
 				{
@@ -215,13 +215,13 @@
 				$q 	.= " ORDER BY id_user ASC";
 				
 
-				$sql_kel = mysql_query($query) or die(mysql_error());
-				$fd_kel = mysql_num_rows($sql_kel);
+				$sql_kel = mysqli_query($conn, $query) or die(mysqli_error());
+				$fd_kel = mysqli_num_rows($sql_kel);
 
 				if($fd_kel > 0)
 				{
 					$no = $posisi + 1;
-					while ($m = mysql_fetch_assoc($sql_kel)) {
+					while ($m = mysqli_fetch_assoc($sql_kel)) {
 						echo"<tr>
 							<td>$m[id_user]</td>
 							<td>$m[nama_lengkap]</td>
@@ -235,7 +235,7 @@
 					}
 	
 
-					$jmldata = mysql_num_rows(mysql_query($q));
+					$jmldata = mysqli_num_rows(mysqli_query($conn,$q));
 
 					$jmlhalaman  = $p->jumlahHalaman($jmldata, $batas);
 		    		$linkHalaman = $p->navHalaman($_GET['halaman'], $jmlhalaman, $linkaksi);

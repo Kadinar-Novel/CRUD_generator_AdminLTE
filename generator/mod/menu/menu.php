@@ -19,11 +19,11 @@
 			if(!empty($_GET['id']))
 			{
 				$act = "$aksi?mod=menu&act=edit";
-				$query = mysql_query("SELECT * FROM menu WHERE id_menu = '$_GET[id]'");
-				$temukan = mysql_num_rows($query);
+				$query = mysqli_query($conn,"SELECT * FROM menu WHERE id_menu = '$_GET[id]'");
+				$temukan = mysqli_num_rows($query);
 				if($temukan > 0)
 				{
-					$c = mysql_fetch_assoc($query);
+					$c = mysqli_fetch_assoc($query);
 				}
 				else
 				{
@@ -151,13 +151,13 @@
 				$q 	.= " ";
 				
 
-				$sql_kul = mysql_query($query);
-				$fd_kul = mysql_num_rows($sql_kul);
+				$sql_kul = mysqli_query($conn,$query);
+				$fd_kul = mysqli_num_rows($sql_kul);
 
 				if($fd_kul > 0)
 				{
 					$no = $posisi + 1;
-					while ($m = mysql_fetch_assoc($sql_kul)) {
+					while ($m = mysqli_fetch_assoc($sql_kul)) {
 						echo"<tr>
 						
 							<td>$no</td>
@@ -174,7 +174,7 @@
 					}
 	
 
-					$jmldata = mysql_num_rows(mysql_query($q));
+					$jmldata = mysqli_num_rows(mysqli_query($conn,$q));
 
 					$jmlhalaman  = $p->jumlahHalaman($jmldata, $batas);
 		    		$linkHalaman = $p->navHalaman($_GET['halaman'], $jmlhalaman, $linkaksi);

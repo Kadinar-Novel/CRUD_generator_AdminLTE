@@ -20,7 +20,7 @@
 	if ($mod == "user" AND $act == "edit") {
 		if(empty($_POST['passwd']))
 		{
-			mysql_query("UPDATE user SET nama_lengkap = '$_POST[nama_lengkap]',
+			mysqli_query($conn,"UPDATE user SET nama_lengkap = '$_POST[nama_lengkap]',
 										usernm = '$_POST[usernm]',
 										level = '$_POST[level]'
 						WHERE id_user = '$_POST[id]'") or die(mysql_error());
@@ -34,7 +34,7 @@
 		{
 			if ($_POST['passwd'] == $_POST['rpasswd']) {
 				$pass = md5($_POST['passwd']);
-				mysql_query("UPDATE user SET nama_lengkap = '$_POST[nama_lengkap]',
+				mysqli_query($conn,"UPDATE user SET nama_lengkap = '$_POST[nama_lengkap]',
 										usernm = '$_POST[usernm]',
 										passwd = '$pass',
 										level = '$_POST[level]'
@@ -61,7 +61,7 @@
 		{
 			if ($_POST['passwd'] == $_POST['rpasswd']) {
 				$pass = md5($_POST['passwd']);
-				mysql_query("INSERT INTO user(nama_lengkap,
+				mysqli_query($conn,"INSERT INTO user(nama_lengkap,
 										usernm,
 										passwd,
 										level)
