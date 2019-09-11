@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 			$_SESSION['login_id'] = $a['iduser'];
 			$_SESSION['level'] = $a['level'];
 			$_SESSION['nama'] = $a['nama_lengkap'];
-			mysql_query($conn, "UPDATE user SET last_login = NOW() WHERE id_user = '$a[id_user]'");
+			mysqli_query($conn, "UPDATE user SET last_login = NOW() WHERE id_user = '$a[id_user]'");
 			header("Location: index.php"); // Mengarahkan ke halaman profil
 		} else {
             $error = "Username atau Password salah.";

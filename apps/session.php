@@ -9,7 +9,7 @@
 	$login_session = $row['nama_lengkap'];
 
 	if(!isset($login_session)){
-		mysql_close($conn); // Menutup koneksi
+		mysqli_close($conn); // Menutup koneksi
 		header('location: login.php'); // Mengarahkan ke Home Page
 	}
 ?>
