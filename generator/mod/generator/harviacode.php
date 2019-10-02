@@ -20,7 +20,7 @@ class Harviacode
         $this->host = "localhost";
         $this->user = "root";
         $this->password = "";
-        $this->database = "db_apps";
+        $this->database = "lap_anggaran";
 
         $this->sql = new mysqli($this->host, $this->user, $this->password, $this->database);
         if ($this->sql->connect_error)
