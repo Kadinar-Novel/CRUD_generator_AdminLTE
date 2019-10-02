@@ -78,7 +78,7 @@
 				<p style='margin-top:0;padding-top:0;'><i>Kumpulan Semua Menu</i></p>
 			</div>";
 
-			flash('example_message');
+			//flash('example_message');
 
 			echo"<table style='margin-top:12px;'>
 				<tr>
