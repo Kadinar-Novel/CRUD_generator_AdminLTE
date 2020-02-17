@@ -3,8 +3,9 @@
 
 	function nama_m($id)
 	{
-		$sql = mysql_query("SELECT * FROM menu WHERE id_menu = '$id'") or die(mysql_error());
-		$m = mysql_fetch_assoc($sql);
+		include "conn.php";
+		$sql = mysqli_query($conn, "SELECT * FROM menu WHERE id_menu = '$id'") or die(mysqli_error());
+		$m = mysqli_fetch_assoc($sql);
 
 		return $m['nama_menu'];
 	}
