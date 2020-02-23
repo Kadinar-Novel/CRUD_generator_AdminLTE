@@ -1,4 +1,4 @@
-# CRUD Table dan REST API Generator dengan template AdminLTE
+# CRUD dan REST API Generator dengan template AdminLTE
 Untuk yang baru belajar membuat CRUD (Create, Read, Update, Delete), atau yang ingin cepat membuat CRUD, semoga bisa membantu agar prosesnya lebih cepat.
 
 Setup:
