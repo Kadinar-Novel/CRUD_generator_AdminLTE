@@ -7,6 +7,7 @@
 		$nama_table = safe($_POST['nmtable']);
 		$mod = safe($_POST['nmtable']);
 		$act = "act_".$mod;
+		$api = "api_".$mod;
 		$nama_folder = $mod;
 
 		$nama_header = $_POST['nmtitle'];
@@ -15,6 +16,7 @@
 		//nama file
 		$file1 = $mod.".php";
 		$file2 = $act.".php";
+		$file3 = $api.".php";
 
 		//create folder
 		if (!file_exists("../apps/pages/" . $nama_folder))
@@ -31,6 +33,7 @@
         //generate
         include "create_mod.php";
         include "create_mod_aksi.php";
+        include "create_mod_api.php";
 
 
 	}
