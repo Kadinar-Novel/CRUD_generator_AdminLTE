@@ -11,7 +11,11 @@ Setup:
 7. Untuk ubah database ada didalam folder apps/lib nama file conn.php dan juga  <br/>
 8. Jika ingin mengubah nama aplikasi, ubah saja folder apps sesuai dengan nama aplikasi yang ingin dibuat, kemudian pindahkan folder tersebut diluar dari folder CRUD generator.<br/>
 9. Jalakan apps yang sudah dibuat dengan login menggunakan username: admin password: admin<br/>
-10. Untuk mencoba REST API gunakan http://address_link_project/CRUD_generator_AdminLTE/apps/pages/nama_modul/api_nama_modul.php contoh -> http://localhost/CRUD_generator_AdminLTE/apps/pages/buku/api_buku.php
+10. Untuk mencoba REST API gunakan http://address_link_project/CRUD_generator_AdminLTE/apps/pages/nama_modul/api_nama_modul.php contoh -> http://localhost/CRUD_generator_AdminLTE/apps/pages/buku/api_buku.php<br/>
+
+Berikut tutorial menggunakan CRUD Generator:
+
+https://www.youtube.com/watch?v=Z4vMk8ARHWU
 
 Thanks to: <br/>
 https://adminlte.io/ <br/>
