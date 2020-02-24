@@ -15,7 +15,7 @@ Setup:
 
 Berikut tutorial menggunakan CRUD Generator:
 
-https://www.youtube.com/watch?v=Z4vMk8ARHWU
+[![Alt text](https://img.youtube.com/vi/Z4vMk8ARHWU/0.jpg)](https://www.youtube.com/watch?v=Z4vMk8ARHWU)
 
 Thanks to: <br/>
 https://adminlte.io/ <br/>
