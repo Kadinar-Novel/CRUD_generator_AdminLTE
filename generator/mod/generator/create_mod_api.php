@@ -1,5 +1,6 @@
 <?php
 $string = "<?php
+	header(\"Access-Control-Allow-Origin: *\");
 	session_start();
     include \"../../lib/conn.php\";
     mysqli_set_charset(\$conn,'utf8');
