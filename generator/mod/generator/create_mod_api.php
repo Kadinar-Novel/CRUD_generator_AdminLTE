@@ -2,11 +2,11 @@
 $string = "<?php
 	header(\"Access-Control-Allow-Origin: *\");
 	session_start();
+	header(\"Access-Control-Allow-Methods: POST, GET, PUT, DELETE, OPTIONS\");
     include \"../../lib/conn.php\";
     mysqli_set_charset(\$conn,'utf8');
 
-    \$method = \$_SERVER['REQUEST_METHOD'];
-
+    \$method = isset(\$_POST['_METHOD']) ? \$_POST['_METHOD'] : \$_SERVER['REQUEST_METHOD'];
 
     \$key = isset(\$_REQUEST['".$pk."']) ? \$_REQUEST['".$pk."'] : '';
     ";
